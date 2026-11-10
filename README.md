@@ -1,2 +1,0 @@
-# FEN.gitgub.page
-FEN
