@@ -1,0 +1,9 @@
+PUBLICACIÓN EN GITHUB PAGES
+
+1. Descomprime este ZIP.
+2. Sube TODO el contenido de la carpeta FEN.gitgub.page-main al repositorio, conservando index.html, style.css y script.js.
+3. Las ilustraciones SVG de la página están incrustadas en index.html para evitar rutas rotas.
+4. Si GitHub Pages publica desde una carpeta específica (por ejemplo /docs), coloca allí todos estos archivos.
+5. Espera a que termine el despliegue y recarga con Ctrl+F5.
+
+No cambies los nombres de los archivos principales ni muevas index.html de su carpeta.

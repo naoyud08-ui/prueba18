@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sullana Eco-Resiliente: evaluación educativa y orientativa de vulnerabilidad de viviendas frente a lluvias intensas asociadas al Fenómeno El Niño.">
+    <title>Sullana Eco-Resiliente</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-house-chimney"></i>
+        </div>
+        <div>
+            <h2>Sullana <span>Eco-Resiliente</span></h2>
+            <small>Prevención frente al FEN</small>
+        </div>
+    </div>
+
+    <nav aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#fen">FEN</a>
+        <a href="#evaluacion">Evaluación</a>
+        <a href="#prevencion">Prevención</a>
+        <a href="#informacion">Información</a>
+        <a href="#propuesta">Propuesta</a>
+        <a href="#proyecto">Proyecto</a>
+        <a href="#preguntas">Preguntas frecuentes</a>
+    </nav>
+
+    <a href="#evaluacion" class="nav-button">Evaluar vivienda</a>
+
+    <!-- Menú móvil: visible únicamente en celular -->
+    <button class="mobile-menu-button" id="mobileMenuButton"
+        aria-label="Abrir menú" aria-expanded="false" type="button">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="#fen"><i class="fa-solid fa-cloud-rain"></i> FEN</a>
+        <a href="#evaluacion"><i class="fa-solid fa-clipboard-list"></i> Evaluación</a>
+        <a href="#prevencion"><i class="fa-solid fa-shield-halved"></i> Prevención</a>
+        <a href="#informacion"><i class="fa-solid fa-book-open"></i> Información</a>
+        <a href="#propuesta"><i class="fa-solid fa-lightbulb"></i> Propuesta</a>
+        <a href="#proyecto"><i class="fa-solid fa-diagram-project"></i> Proyecto</a>
+        <a href="#preguntas"><i class="fa-solid fa-circle-question"></i> Preguntas frecuentes</a>
+        <a href="#evaluacion" class="mobile-menu-evaluate">
+            <i class="fa-solid fa-arrow-right"></i> Evaluar vivienda
+        </a>
+    </div>
+</header>
+
+<main>
+
+<section id="inicio" class="hero">
+    <div class="hero-content">
+
+        <div class="tag">
+            <i class="fa-solid fa-shield-heart"></i>
+            Prevención y resiliencia
+        </div>
+
+        <h1>
+            Conoce el nivel de
+            <span>vulnerabilidad</span>
+            de tu vivienda
+        </h1>
+
+        <p>
+            Evalúa de manera rápida y sencilla algunas condiciones
+            de tu vivienda frente a lluvias intensas asociadas al
+            Fenómeno El Niño.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#evaluacion" class="btn-primary">
+                <i class="fa-solid fa-clipboard-check"></i>
+                Comenzar evaluación
+            </a>
+
+            <a href="#informacion" class="btn-secondary">
+                Conocer más
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+
+        <div class="hero-data">
+            <div>
+                <strong>01</strong>
+                <span>Evaluación sencilla</span>
+            </div>
+            <div>
+                <strong>02</strong>
+                <span>Resultado orientativo</span>
+            </div>
+            <div>
+                <strong>03</strong>
+                <span>Recomendaciones</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="circle-bg"></div>
+
+        <div class="house-card">
+            <div class="rain">
+                <span>•</span><span>•</span><span>•</span><span>•</span><span>•</span>
+            </div>
+
+            <i class="fa-solid fa-house-chimney house-icon"></i>
+
+            <div class="shield">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+        </div>
+
+        <div class="floating-card card-one">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idCBkIj4KPHRpdGxlIGlkPSJ0Ij5WaXZpZW5kYSBwcm90ZWdpZGEgZnJlbnRlIGEgbGx1dmlhcyBpbnRlbnNhczwvdGl0bGU+PGRlc2MgaWQ9ImQiPklsdXN0cmFjacOzbiBkZSB1bmEgY2FzYSBzZWd1cmEsIGxsdXZpYSwgYWd1YSBjYW5hbGl6YWRhIHkgdW4gZXNjdWRvIGRlIHByb3RlY2Npw7NuLjwvZGVzYz4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNkZmY1ZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNiNmU1ZjUiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJyb29mIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzI3OGI3MiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE0NjM0ZiIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9IndhbGwiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZmZGY0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZThmNGU5Ii8+PC9saW5lYXJHcmFkaWVudD4KIDxsaW5lYXJHcmFkaWVudCBpZD0ic2hpZWxkIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzQxYzc4YSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4N2I2MCIvPjwvbGluZWFyR3JhZGllbnQ+CiA8ZmlsdGVyIGlkPSJzaGFkb3ciIHg9Ii0zMCUiIHk9Ii0zMCUiIHdpZHRoPSIxNjAlIiBoZWlnaHQ9IjE3MCUiPjxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIxMiIgc3RkRGV2aWF0aW9uPSIxMiIgZmxvb2QtY29sb3I9IiMxZDU4NzEiIGZsb29kLW9wYWNpdHk9Ii4xOCIvPjwvZmlsdGVyPgo8L2RlZnM+CjxyZWN0IHg9IjEyIiB5PSIxMiIgd2lkdGg9IjYxNiIgaGVpZ2h0PSI0MzYiIHJ4PSI0MiIgZmlsbD0idXJsKCNza3kpIi8+CjxjaXJjbGUgY3g9IjUwMCIgY3k9Ijg4IiByPSIzOSIgZmlsbD0iI2ZmZjRiZCIgb3BhY2l0eT0iLjk1Ii8+CjxnIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii45Ij48ZWxsaXBzZSBjeD0iMTIwIiBjeT0iOTQiIHJ4PSI1OCIgcnk9IjIyIi8+PGVsbGlwc2UgY3g9IjE1MyIgY3k9IjgwIiByeD0iMzUiIHJ5PSIyOCIvPjxlbGxpcHNlIGN4PSIxODMiIGN5PSI5NiIgcng9IjQyIiByeT0iMjAiLz48ZWxsaXBzZSBjeD0iNDMwIiBjeT0iMTQyIiByeD0iNTAiIHJ5PSIxOCIvPjxlbGxpcHNlIGN4PSI0NjIiIGN5PSIxMjkiIHJ4PSIzMCIgcnk9IjI1Ii8+PC9nPgo8cGF0aCBkPSJNMjUgMzQ1IFExNDAgMzAwIDI1MCAzNDIgVDYxNSAzMzAgVjQyNSBIMjVaIiBmaWxsPSIjYTlkY2FhIi8+PHBhdGggZD0iTTI1IDM3OCBRMTgwIDM0MCAzMTAgMzc2IFQ2MTUgMzY2IFY0MzggSDI1WiIgZmlsbD0iIzYyYjk4NyIvPgo8ZyBzdHJva2U9IiM2NGE5ZDAiIHN0cm9rZS13aWR0aD0iOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIuOCI+PHBhdGggZD0iTTgwIDE0NWwtMTIgMjhNMTIwIDE1NWwtMTIgMjhNMTYwIDE0NWwtMTIgMjhNNTEwIDE4NWwtMTIgMjhNNTUwIDE3MGwtMTIgMjgiLz48L2c+CjxnIGZpbHRlcj0idXJsKCNzaGFkb3cpIj4KIDxwYXRoIGQ9Ik0xNTAgMjQ1IEwzMTUgMTIwIEw0ODAgMjQ1WiIgZmlsbD0idXJsKCNyb29mKSIgc3Ryb2tlPSIjMTU1ZjUwIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KIDxwYXRoIGQ9Ik0xOTAgMjM1aDI1MHYxNDVIMTkweiIgZmlsbD0idXJsKCN3YWxsKSIgc3Ryb2tlPSIjNGM5Mjc4IiBzdHJva2Utd2lkdGg9IjciLz4KIDxwYXRoIGQ9Ik0yODAgMjkyaDY3djg4aC02N3oiIGZpbGw9IiNiOTc4NGUiIHN0cm9rZT0iIzg1NTMzNiIgc3Ryb2tlLXdpZHRoPSI2Ii8+PGNpcmNsZSBjeD0iMzMzIiBjeT0iMzM3IiByPSI0IiBmaWxsPSIjZmZmMGM4Ii8+CiA8cmVjdCB4PSIyMTgiIHk9IjI2MyIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iNSIgZmlsbD0iIzhlZDVlZCIgc3Ryb2tlPSIjNDM4ZWFhIiBzdHJva2Utd2lkdGg9IjYiLz48cGF0aCBkPSJNMjQyIDI2NHY0N00yMTkgMjg3aDQ3IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNCIvPgogPHJlY3QgeD0iMzY1IiB5PSIyNjMiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgcng9IjUiIGZpbGw9IiM4ZWQ1ZWQiIHN0cm9rZT0iIzQzOGVhYSIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHBhdGggZD0iTTM4OSAyNjR2NDdNMzY2IDI4N2g0NyIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjQiLz4KPC9nPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MjAgMjcwKSIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiPjxwYXRoIGQ9Ik03NSAwIDEzOSAyM3Y1NmMwIDQ4LTI5IDgyLTY0IDEwMUM0MCAxNjEgMTEgMTI3IDExIDc5VjIzWiIgZmlsbD0idXJsKCNzaGllbGQpIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iOSIvPjxwYXRoIGQ9Im00MyA4MyAyMiAyMiA0My00OSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjE0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+CjxnIGZpbGw9IiMyODdmNWIiPjxwYXRoIGQ9Ik04MiAzNjhxLTM1LTQ2LTU2LTEzIDIyIDMyIDU2IDEzTTgzIDM2OXEtNy01NSAyOC01NCA2IDM2LTI4IDU0TTU0OCAzNzJxLTMwLTQ4LTU0LTE4IDE4IDM0IDU0IDE4TTU0OCAzNzFxLTQtNTQgMzItNTEgNCAzNi0zMiA1MSIvPjwvZz4KPHBhdGggZD0iTTg1IDQwMmg0NzAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9Ii43NSIvPgo8L3N2Zz4K" alt="Vivienda protegida frente a lluvias intensas" loading="eager">
+            <div>
+                <strong>Prevención</strong>
+                <small>Reduce los riesgos</small>
+            </div>
+        </div>
+
+        <div class="floating-card card-two">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idCBkIj4KPHRpdGxlIGlkPSJ0Ij5FdmFsdWFjacOzbiBwcmV2ZW50aXZhIGRlIGxhIHZpdmllbmRhPC90aXRsZT48ZGVzYyBpZD0iZCI+VW5hIGZhbWlsaWEgcmV2aXNhIHVuYSBsaXN0YSBkZSBzZWd1cmlkYWQgZGUgc3UgY2FzYSBqdW50byBhIHVuYSB2aXZpZW5kYSB5IHVuIHPDrW1ib2xvIGRlIGFwcm9iYWNpw7NuLjwvZGVzYz4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2U4ZjhmMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q4ZWRmZiIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9InBhcGVyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2VmZjhmZiIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImdyZWVuIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzQ4Yzk4ZCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4N2Q2MCIvPjwvbGluZWFyR3JhZGllbnQ+CiA8ZmlsdGVyIGlkPSJzIiB4PSItMzAlIiB5PSItMzAlIiB3aWR0aD0iMTYwJSIgaGVpZ2h0PSIxNzAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTIiIHN0ZERldmlhdGlvbj0iMTIiIGZsb29kLWNvbG9yPSIjMjg1YjczIiBmbG9vZC1vcGFjaXR5PSIuMTciLz48L2ZpbHRlcj4KPC9kZWZzPgo8cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSI2MTYiIGhlaWdodD0iNDM2IiByeD0iNDIiIGZpbGw9InVybCgjYmcpIi8+CjxjaXJjbGUgY3g9IjUxMCIgY3k9IjgyIiByPSI0MiIgZmlsbD0iI2ZmZjFiOCIvPgo8cGF0aCBkPSJNMjUgMzU1cTEzMC00OCAyNTUtNXQzMzUtOHY5NEgyNVoiIGZpbGw9IiM5YmQ3YTgiLz48cGF0aCBkPSJNMjUgMzg5cTE1MC0zNSAzMDAtMnQyOTAtN3Y1OEgyNVoiIGZpbGw9IiM2MGI4ODkiLz4KPGcgZmlsdGVyPSJ1cmwoI3MpIj48cmVjdCB4PSI1NSIgeT0iNjIiIHdpZHRoPSIyNTAiIGhlaWdodD0iMzEwIiByeD0iMjUiIGZpbGw9InVybCgjcGFwZXIpIiBzdHJva2U9IiNjNGUwZTciIHN0cm9rZS13aWR0aD0iNSIvPjxyZWN0IHg9IjU1IiB5PSI2MiIgd2lkdGg9IjI1MCIgaGVpZ2h0PSI2NSIgcng9IjI0IiBmaWxsPSIjMTY3Zjc5Ii8+PHBhdGggZD0iTTU1IDEwNGgyNTB2MjNINTVaIiBmaWxsPSIjMTY3Zjc5Ii8+PHRleHQgeD0iMTgwIiB5PSIxMDMiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIj5NSSBWSVZJRU5EQTwvdGV4dD4KPGcgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZpbGw9IiMzMTU2NmEiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI2MDAiPjx0ZXh0IHg9IjExNiIgeT0iMTcxIj5UZWNobyBzZWd1cm88L3RleHQ+PHRleHQgeD0iMTE2IiB5PSIyMzEiPkRyZW5hamUgbGltcGlvPC90ZXh0Pjx0ZXh0IHg9IjExNiIgeT0iMjkxIj5SdXRhIHNlZ3VyYTwvdGV4dD48L2c+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMxYTg3OCIgc3Ryb2tlLXdpZHRoPSI1Ij48cmVjdCB4PSI3OCIgeT0iMTQ1IiB3aWR0aD0iMjciIGhlaWdodD0iMjciIHJ4PSI3Ii8+PHBhdGggZD0ibTg0IDE1OCA3IDcgMTItMTUiLz48cmVjdCB4PSI3OCIgeT0iMjA1IiB3aWR0aD0iMjciIGhlaWdodD0iMjciIHJ4PSI3Ii8+PHBhdGggZD0ibTg0IDIxOCA3IDcgMTItMTUiLz48cmVjdCB4PSI3OCIgeT0iMjY1IiB3aWR0aD0iMjciIGhlaWdodD0iMjciIHJ4PSI3Ii8+PHBhdGggZD0ibTg0IDI3OCA3IDcgMTItMTUiLz48L2c+CjwvZz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzUwIDE5MCkiIGZpbHRlcj0idXJsKCNzKSI+PHBhdGggZD0iTTAgOTAgMTA1IDEwIDIxMCA5MHYxMjhIMFoiIGZpbGw9IiNmZmY5ZTkiIHN0cm9rZT0iIzUyOWI3ZCIgc3Ryb2tlLXdpZHRoPSI3Ii8+PHBhdGggZD0iTS0xNCA5NiAxMDUgNCAyMjQgOTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI2N2U2OCIgc3Ryb2tlLXdpZHRoPSIxOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iODIiIHk9IjE0MyIgd2lkdGg9IjQ4IiBoZWlnaHQ9Ijc1IiByeD0iNSIgZmlsbD0iI2I5Nzk1MCIvPjxyZWN0IHg9IjI1IiB5PSIxMTciIHdpZHRoPSI0MyIgaGVpZ2h0PSI0MiIgcng9IjUiIGZpbGw9IiM4YmQyZTkiIHN0cm9rZT0iIzRkOThiMyIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHJlY3QgeD0iMTQ1IiB5PSIxMTciIHdpZHRoPSI0MyIgaGVpZ2h0PSI0MiIgcng9IjUiIGZpbGw9IiM4YmQyZTkiIHN0cm9rZT0iIzRkOThiMyIgc3Ryb2tlLXdpZHRoPSI1Ii8+PC9nPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MjUgNDIpIiBmaWx0ZXI9InVybCgjcykiPjxjaXJjbGUgY3g9Ijc2IiBjeT0iNzYiIHI9IjY2IiBmaWxsPSJ1cmwoI2dyZWVuKSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjkiLz48cGF0aCBkPSJtNDIgNzcgMjMgMjQgNDgtNTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9nPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNDAgMzUwKSIgZmlsbD0iIzI2N2M1OSI+PHBhdGggZD0iTTAgNDBxLTMwLTQyLTQ4LTE0IDE2IDI5IDQ4IDE0TTAgNDBxLTItNDUgMjktNDIgNCAzMC0yOSA0MiIvPjxwYXRoIGQ9Ik0yNjAgNDBxLTMwLTQyLTQ4LTE0IDE2IDI5IDQ4IDE0TTI2MCA0MHEtMi00NSAyOS00MiA0IDMwLTI5IDQyIi8+PC9nPgo8L3N2Zz4K" alt="Evaluación preventiva de las condiciones de tu vivienda" loading="eager">
+            <div>
+                <strong>Evaluación</strong>
+                <small>Valora tu vivienda</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat-card">
+        <i class="fa-solid fa-house"></i>
+        <div>
+            <strong>Vivienda</strong>
+            <span>Analiza condiciones básicas</span>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-cloud-showers-heavy"></i>
+        <div>
+            <strong>Lluvias intensas</strong>
+            <span>Considera posibles efectos</span>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-chart-simple"></i>
+        <div>
+            <strong>Nivel orientativo</strong>
+            <span>Interpreta tus respuestas</span>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"><span>Evalúa tu vivienda</span></div>
+<section id="evaluacion" class="evaluation-section">
+    <div class="section-heading">
+        <div class="section-tag">
+            <i class="fa-solid fa-clipboard-list"></i>
+            Evaluación
+        </div>
+
+        <h2>Evalúa tu vivienda</h2>
+
+        <p>
+            Responde las cinco variables de riesgo. Cada respuesta vale de 1 a 3 puntos,
+            por lo que el puntaje máximo es de 15 puntos.
+        </p>
+    </div>
+
+    <div class="evaluation-container">
+
+        <div class="form-card">
+            <div class="form-header">
+                <div>
+                    <span class="step">5 VARIABLES · 15 PUNTOS</span>
+                    <h3>Evaluación de vulnerabilidad</h3>
+                </div>
+                <i class="fa-solid fa-house-circle-check"></i>
+            </div>
+
+            <form id="evaluationForm">
+
+                <div class="input-group full">
+                    <label for="referencia">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Nombre o referencia de la vivienda
+                    </label>
+
+                    <input
+                        type="text"
+                        id="referencia"
+                        name="referencia"
+                        placeholder="Ejemplo: Mi vivienda">
+                </div>
+
+                <div class="question-grid">
+
+                    <div class="input-group">
+                        <label for="techo">
+                            1. ¿En qué estado se encuentra el techo de la vivienda frente a las lluvias?
+                        </label>
+                        <select id="techo" name="techo" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="1">Está en buen estado y no presenta filtraciones</option>
+                            <option value="2">Presenta pequeños deterioros o filtraciones</option>
+                            <option value="3">Está deteriorado y presenta filtraciones importantes</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="drenaje">
+                            2. ¿Cómo funciona el drenaje o evacuación de agua de la vivienda?
+                        </label>
+                        <select id="drenaje" name="drenaje" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="1">Evacúa el agua correctamente y está libre de obstrucciones</option>
+                            <option value="2">Evacúa con dificultad o presenta algunas obstrucciones</option>
+                            <option value="3">No evacúa bien el agua o está obstruido/inexistente</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="zona">
+                            3. ¿Qué tan expuesta está la vivienda a la acumulación de agua durante lluvias intensas?
+                        </label>
+                        <select id="zona" name="zona" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="1">Tiene poco riesgo de acumulación de agua</option>
+                            <option value="2">Puede presentar acumulación de agua en algunas ocasiones</option>
+                            <option value="3">Está en una zona con alta acumulación o ingreso de agua</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="estado">
+                            4. ¿La vivienda recibe mantenimiento preventivo antes de la temporada de lluvias?
+                        </label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="1">Sí, se revisa y mantiene antes de las lluvias</option>
+                            <option value="2">A veces se realiza mantenimiento</option>
+                            <option value="3">No se realiza mantenimiento preventivo</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group full">
+                        <label for="paredes">
+                            5. ¿Qué condición presentan las paredes de la vivienda frente a la humedad?
+                        </label>
+                        <select id="paredes" name="paredes" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="1">Están firmes y sin señales importantes de humedad</option>
+                            <option value="2">Presentan algunas grietas, humedad o deterioro</option>
+                            <option value="3">Presentan grietas importantes o humedad severa</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="evaluate-button">
+                    <span>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Evaluar vulnerabilidad
+                    </span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+
+        <aside class="info-card">
+            <div class="info-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <h3>¿Cómo funciona?</h3>
+
+            <p>
+                El sistema escucha, extrae, valida, calcula y decide el nivel de riesgo antes de inyectar el resultado en la página.
+            </p>
+
+            <div class="process">
+                <div class="process-item"><span>01</span><div><strong>Escuchar</strong><small>Capturar el clic del usuario.</small></div></div>
+                <div class="process-item"><span>02</span><div><strong>Extraer</strong><small>Obtener y convertir los valores.</small></div></div>
+                <div class="process-item"><span>03</span><div><strong>Validar</strong><small>Comprobar que no falten datos.</small></div></div>
+                <div class="process-item"><span>04</span><div><strong>Calcular</strong><small>Sumar los puntos de riesgo.</small></div></div>
+                <div class="process-item"><span>05</span><div><strong>Decidir</strong><small>Clasificar bajo, medio o alto.</small></div></div>
+                <div class="process-item"><span>06</span><div><strong>Inyectar</strong><small>Mostrar el diagnóstico en pantalla.</small></div></div>
+            </div>
+
+            <div class="notice">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>El resultado es educativo y orientativo.</span>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section id="resultado" class="result-section hidden" aria-live="polite">
+    <div id="contenedorResultado"></div>
+</section>
+
+<div class="section-divider"><span>Actúa y previene</span></div>
+<section id="prevencion" class="prevention-section">
+    <div class="section-heading">
+        <div class="section-tag">
+            <i class="fa-solid fa-shield"></i>
+            Prevención
+        </div>
+
+        <h2>Pequeñas acciones pueden reducir riesgos</h2>
+
+        <p>
+            Prepararse con anticipación ayuda a proteger la vivienda
+            y a mejorar la capacidad de respuesta ante lluvias intensas.
+        </p>
+    </div>
+
+    <div class="prevention-grid">
+
+        <article class="prevention-card">
+            <div class="prevention-number">01</div>
+            <img class="prevention-illustration" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMTcwIj48cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjE3MCIgcng9IjE4IiBmaWxsPSIjZTRmN2Y1Ii8+PGNpcmNsZSBjeD0iMjU1IiBjeT0iMzQiIHI9IjIyIiBmaWxsPSIjYmNlYmU1Ii8+PHBhdGggZD0iTTI1IDEyMmgyNzAiIHN0cm9rZT0iIzcyYzliZCIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNNzIgNDB2NjBtLTE1LTE1IDE1IDE1IDE1LTE1TTEyNSA0MHY2MG0tMTUtMTUgMTUgMTUgMTUtMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzA3OGY5MSIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTkwIDcyaDcydjUwaC03MnoiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzI4N2M5MSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZD0iTTE5MCA4Nmg3Mk0yMDUgNzJ2NTBtNDItNTB2NTAiIHN0cm9rZT0iIzY5YjljNCIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHBhdGggZD0iTTI4IDE0MmMyNC0xMiA0OC0xMiA3MiAwczQ4IDEyIDcyIDAgNDgtMTIgNzIgMCAzMiA3IDQ4IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2YTZhMCIgc3Ryb2tlLXdpZHRoPSI1Ii8+PC9zdmc+" alt="Ilustración sobre drenaje" loading="lazy">
+            <div class="prevention-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+            <h3>Revisa el drenaje</h3>
+            <p>
+                Mantén libres de residuos los espacios destinados
+                al paso y evacuación del agua.
+            </p>
+        </article>
+
+        <article class="prevention-card">
+            <div class="prevention-number">02</div>
+            <img class="prevention-illustration" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMTcwIj48cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjE3MCIgcng9IjE4IiBmaWxsPSIjZWFmNGZiIi8+PGNpcmNsZSBjeD0iMjYwIiBjeT0iMzUiIHI9IjE5IiBmaWxsPSIjYzhlNWY1Ii8+PHBhdGggZD0iTTQ4IDg4IDE2MCAyNWwxMTIgNjMiIGZpbGw9IiMxNTljOTMiIHN0cm9rZT0iIzEyNmI3OSIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTc2IDgyaDE2OHY3MEg3NnoiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzI4N2M5MSIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHJlY3QgeD0iMTQzIiB5PSIxMDUiIHdpZHRoPSIzNiIgaGVpZ2h0PSI0NyIgcng9IjQiIGZpbGw9IiNmM2M3NmEiIHN0cm9rZT0iIzI4N2M5MSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHJlY3QgeD0iOTIiIHk9Ijk4IiB3aWR0aD0iMzQiIGhlaWdodD0iMjkiIGZpbGw9IiNiOWU1ZjEiIHN0cm9rZT0iIzI4N2M5MSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHJlY3QgeD0iMTk0IiB5PSI5OCIgd2lkdGg9IjM0IiBoZWlnaHQ9IjI5IiBmaWxsPSIjYjllNWYxIiBzdHJva2U9IiMyODdjOTEiIHN0cm9rZS13aWR0aD0iNCIvPjxwYXRoIGQ9Ik0zNSAxNTNoMjUwIiBzdHJva2U9IiM3YmM3YTAiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTI2NSAxMDV2MzVtLTEyLTEyIDEyIDEyIDEyLTEyIiBmaWxsPSJub25lIiBzdHJva2U9IiMxNTljOTMiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+" alt="Ilustración sobre vivienda" loading="lazy">
+            <div class="prevention-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <h3>Revisa tu vivienda</h3>
+            <p>
+                Observa periódicamente techos, paredes y otros
+                elementos que puedan presentar deterioro.
+            </p>
+        </article>
+
+        <article class="prevention-card">
+            <div class="prevention-number">03</div>
+            <img class="prevention-illustration" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMTcwIj48cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjE3MCIgcng9IjE4IiBmaWxsPSIjZWVmN2VkIi8+PGNpcmNsZSBjeD0iMTYwIiBjeT0iNzciIHI9IjU1IiBmaWxsPSIjZDhmMGQyIi8+PGNpcmNsZSBjeD0iMTA1IiBjeT0iNjciIHI9IjI1IiBmaWxsPSIjZjFjNDljIi8+PGNpcmNsZSBjeD0iMTYwIiBjeT0iNTAiIHI9IjI5IiBmaWxsPSIjZDk5ZDczIi8+PGNpcmNsZSBjeD0iMjE1IiBjeT0iNjciIHI9IjI1IiBmaWxsPSIjZWRiZDkxIi8+PHBhdGggZD0iTTY1IDE1MWMyLTM4IDE4LTU3IDQwLTU3czM5IDE5IDQxIDU3IiBmaWxsPSIjMTU5YzkzIi8+PHBhdGggZD0iTTExOSAxNTFjMi00NyAxNy02OSA0MS02OXMzOSAyMiA0MSA2OSIgZmlsbD0iIzI4N2M5MSIvPjxwYXRoIGQ9Ik0xNzQgMTUxYzItMzggMTgtNTcgNDEtNTdzMzkgMTkgNDAgNTciIGZpbGw9IiM3OWI5NWMiLz48cGF0aCBkPSJNMTQ1IDkxaDMwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTMwIDE0NWgyNjAiIHN0cm9rZT0iI2E4ZDZhMCIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=" alt="Ilustración sobre familia" loading="lazy">
+            <div class="prevention-icon">
+                <i class="fa-solid fa-list-check"></i>
+            </div>
+            <h3>Prepárate</h3>
+            <p>
+                Identifica zonas seguras y organiza acciones
+                preventivas con tu familia.
+            </p>
+        </article>
+
+        <article class="prevention-card">
+            <div class="prevention-number">04</div>
+            <img class="prevention-illustration" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMTcwIj48cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjE3MCIgcng9IjE4IiBmaWxsPSIjZmZmNWU4Ii8+PHBhdGggZD0iTTE2MCAyMiAyNjUgMTQwSDU1eiIgZmlsbD0iI2ZmZDc3ZSIgc3Ryb2tlPSIjZDk5YTMxIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTYwIDY1djM2IiBzdHJva2U9IiM4MDViMjQiIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjE2MCIgY3k9IjEyMCIgcj0iNyIgZmlsbD0iIzgwNWIyNCIvPjxwYXRoIGQ9Ik0zNCA0OGgzNm0tMTgtMTh2MzZNMjUwIDM3aDM4bS0xOS0xOXYzOCIgc3Ryb2tlPSIjZThiNjViIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yMCAxNTFoMjgwIiBzdHJva2U9IiNlOGM1OGIiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+" alt="Ilustración sobre alerta" loading="lazy">
+            <div class="prevention-icon">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <h3>Mantente informado</h3>
+            <p>
+                Presta atención a las recomendaciones y alertas
+                oficiales durante eventos climáticos.
+            </p>
+        </article>
+    </div>
+</section>
+
+
+<!-- ================= FEN ================= -->
+<div class="section-divider"><span>Conoce el contexto</span></div>
+<section id="fen" class="fen-section">
+    <div class="section-heading">
+        <div class="section-tag">
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+            Conoce el FEN
+        </div>
+        <h2>¿Qué es el Fenómeno El Niño?</h2>
+        <p>
+            Es un fenómeno climático que puede modificar las condiciones
+            habituales y favorecer periodos de lluvias intensas en distintas zonas.
+            Conocer sus posibles efectos ayuda a fortalecer la prevención.
+        </p>
+    </div>
+
+    <div class="fen-grid">
+        <article class="fen-card">
+            <div class="fen-card-icon"><i class="fa-solid fa-cloud-rain"></i></div>
+            <h3>Lluvias intensas</h3>
+            <p>Las precipitaciones pueden generar acumulación de agua y afectar viviendas y vías.</p>
+        </article>
+
+        <article class="fen-card">
+            <div class="fen-card-icon"><i class="fa-solid fa-house-flood-water"></i></div>
+            <h3>Impacto en viviendas</h3>
+            <p>Techos, paredes y sistemas de drenaje pueden requerir mayor atención preventiva.</p>
+        </article>
+
+        <article class="fen-card">
+            <div class="fen-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h3>Enfoque local</h3>
+            <p>La propuesta considera las necesidades de familias y viviendas de Sullana.</p>
+        </article>
+    </div>
+</section>
+
+<!-- ================= QUE EVALUAMOS ================= -->
+<section class="variables-section">
+    <div class="section-heading">
+        <div class="section-tag">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            ¿Qué evaluamos?
+        </div>
+        <h2>Cinco variables de riesgo</h2>
+        <p>Tres variables base y dos variables adicionales permiten construir un puntaje máximo de 15 puntos.</p>
+    </div>
+
+    <div class="variables-grid">
+        <article class="variable-card"><i class="fa-solid fa-house"></i><strong>Techo</strong><span>Condición del techo</span></article>
+        <article class="variable-card"><i class="fa-solid fa-water"></i><strong>Drenaje</strong><span>Evacuación del agua</span></article>
+        <article class="variable-card"><i class="fa-solid fa-location-dot"></i><strong>Zona</strong><span>Exposición de la ubicación</span></article>
+        <article class="variable-card variable-adicional"><i class="fa-solid fa-screwdriver-wrench"></i><strong>Estado</strong><span>Variable adicional</span></article>
+        <article class="variable-card variable-adicional"><i class="fa-solid fa-building"></i><strong>Paredes</strong><span>Variable adicional</span></article>
+    </div>
+</section>
+
+<!-- ================= PUNTAJE ================= -->
+<section class="score-guide-section">
+    <div class="section-heading">
+        <div class="section-tag">
+            <i class="fa-solid fa-chart-column"></i>
+            Interpretación
+        </div>
+        <h2>¿Cómo se interpreta el puntaje?</h2>
+        <p>El sistema suma las cinco variables, con un máximo de 15 puntos, y aplica las condiciones FEN definidas en el algoritmo.</p>
+    </div>
+
+    <div class="score-guide">
+        <div class="score-level low">
+            <span>1–5</span>
+            <div><i class="fa-solid fa-circle-check"></i></div>
+            <strong>Vulnerabilidad baja</strong>
+            <p>Pocos factores identificados. Mantén las medidas preventivas.</p>
+        </div>
+
+        <div class="score-level medium">
+            <span>6–9</span>
+            <div><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <strong>Vulnerabilidad media</strong>
+            <p>Existen factores que requieren atención y mantenimiento.</p>
+        </div>
+
+        <div class="score-level high">
+            <span>10–15</span>
+            <div><i class="fa-solid fa-shield-halved"></i></div>
+            <strong>Vulnerabilidad alta</strong>
+            <p>Se recomienda priorizar acciones preventivas y buscar orientación técnica cuando corresponda.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PLAN FAMILIAR ================= -->
+<section class="family-section">
+    <div class="section-heading">
+        <div class="section-tag">
+            <i class="fa-solid fa-people-group"></i>
+            Plan familiar
+        </div>
+        <h2>Prepárate antes, durante y después</h2>
+        <p>Una familia informada puede organizar mejor sus acciones de prevención y respuesta.</p>
+    </div>
+
+    <div class="family-grid">
+        <article class="family-card">
+            <span>01</span>
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Antes</h3>
+            <p>Revisa el techo, limpia drenajes, protege documentos e identifica zonas seguras.</p>
+        </article>
+
+        <article class="family-card">
+            <span>02</span>
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+            <h3>Durante</h3>
+            <p>Mantente informado, evita zonas inundadas y sigue las indicaciones oficiales.</p>
+        </article>
+
+        <article class="family-card">
+            <span>03</span>
+            <i class="fa-solid fa-house-circle-check"></i>
+            <h3>Después</h3>
+            <p>Evalúa las condiciones con precaución, evita zonas peligrosas y reporta daños cuando corresponda.</p>
+        </article>
+    </div>
+</section>
+
+<!-- ================= CHECKLIST ================= -->
+<section class="checklist-section">
+    <div class="checklist-content">
+        <div class="section-tag">
+            <i class="fa-solid fa-list-check"></i>
+            Mi checklist
+        </div>
+        <h2>¿Qué tan preparada está tu vivienda?</h2>
+        <p>Marca las acciones que ya realizaste y observa tu avance.</p>
+    </div>
+
+    <div class="checklist-card">
+        <label class="check-item"><input type="checkbox" class="checklist-input"><span>Revisé mi techo</span></label>
+        <label class="check-item"><input type="checkbox" class="checklist-input"><span>Limpié los drenajes</span></label>
+        <label class="check-item"><input type="checkbox" class="checklist-input"><span>Revisé las paredes</span></label>
+        <label class="check-item"><input type="checkbox" class="checklist-input"><span>Identifiqué zonas seguras</span></label>
+        <label class="check-item"><input type="checkbox" class="checklist-input"><span>Protegí documentos importantes</span></label>
+        <label class="check-item"><input type="checkbox" class="checklist-input"><span>Preparé una mochila de emergencia</span></label>
+        <label class="check-item"><input type="checkbox" class="checklist-input"><span>Mi familia conoce qué hacer</span></label>
+
+        <div class="check-progress-top">
+            <span>Progreso de preparación</span>
+            <strong id="checkPercent">0%</strong>
+        </div>
+        <div class="check-progress"><div id="checkProgressBar"></div></div>
+    </div>
+</section>
+
+<!-- ================= PROPUESTA ================= -->
+<section id="propuesta" class="proposal-section">
+    <div class="section-heading">
+        <div class="section-tag">
+            <i class="fa-solid fa-lightbulb"></i>
+            Nuestra propuesta
+        </div>
+        <h2>¿Qué aporta Sullana Eco-Resiliente?</h2>
+        <p>Una herramienta digital sencilla que convierte información de la vivienda en orientación preventiva.</p>
+    </div>
+
+    <div class="proposal-grid">
+        <article><i class="fa-solid fa-magnifying-glass"></i><h3>Identifica</h3><p>Reconoce factores de vulnerabilidad.</p></article>
+        <article><i class="fa-solid fa-chart-simple"></i><h3>Evalúa</h3><p>Convierte las respuestas en un puntaje.</p></article>
+        <article><i class="fa-solid fa-compass"></i><h3>Orienta</h3><p>Entrega recomendaciones preventivas.</p></article>
+        <article><i class="fa-solid fa-graduation-cap"></i><h3>Educa</h3><p>Promueve una cultura de prevención.</p></article>
+    </div>
+</section>
+
+<!-- ================= OBJETIVO Y PUBLICO ================= -->
+<section id="proyecto" class="project-section">
+    <div class="project-text">
+        <div class="section-tag">
+            <i class="fa-solid fa-bullseye"></i>
+            Proyecto
+        </div>
+        <h2>Objetivo de Sullana Eco-Resiliente</h2>
+        <p>
+            Facilitar a las familias de Sullana una herramienta digital sencilla
+            que permita reconocer factores de vulnerabilidad de su vivienda y
+            promover acciones preventivas frente a lluvias intensas asociadas
+            al Fenómeno El Niño.
+        </p>
+    </div>
+
+    <div class="audience-box">
+        <h3><i class="fa-solid fa-users"></i> ¿A quién está dirigido?</h3>
+        <ul>
+            <li>Familias y hogares de Sullana.</li>
+            <li>Viviendas ubicadas en zonas expuestas.</li>
+            <li>Estudiantes y comunidad educativa.</li>
+            <li>Personas interesadas en prevención.</li>
+        </ul>
+    </div>
+</section>
+
+<div class="section-divider"><span>Aprende y comprende</span></div>
+<section id="informacion" class="information-section">
+
+    <div class="information-content">
+        <div class="section-tag">
+            <i class="fa-solid fa-book-open"></i>
+            Información
+        </div>
+
+        <h2>¿Por qué es importante evaluar la vulnerabilidad?</h2>
+
+        <p>
+            El Fenómeno El Niño puede estar acompañado de lluvias
+            intensas que afectan diferentes zonas. Conocer algunas
+            condiciones de una vivienda permite identificar factores
+            que requieren atención preventiva.
+        </p>
+
+        <p>
+            Sullana Eco-Resiliente busca facilitar una primera
+            orientación de forma sencilla, educativa y accesible.
+        </p>
+    </div>
+
+    <div class="information-box">
+        <div class="info-box-item">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div>
+                <strong>Identifica</strong>
+                <span>Factores de vulnerabilidad.</span>
+            </div>
+        </div>
+
+        <div class="info-box-item">
+            <i class="fa-solid fa-chart-pie"></i>
+            <div>
+                <strong>Analiza</strong>
+                <span>Las respuestas ingresadas.</span>
+            </div>
+        </div>
+
+        <div class="info-box-item">
+            <i class="fa-solid fa-shield-heart"></i>
+            <div>
+                <strong>Previene</strong>
+                <span>Con recomendaciones sencillas.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+
+<section class="impact-section">
+    <div class="impact-copy">
+        <div class="section-tag">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            Impacto esperado
+        </div>
+        <h2>De una respuesta simple a una acción preventiva</h2>
+        <p>
+            El objetivo no es solo mostrar un número. La herramienta busca que
+            la persona reconozca condiciones de su vivienda, comprenda por qué
+            son importantes y pueda tomar pequeñas acciones de prevención.
+        </p>
+    </div>
+    <div class="impact-metrics">
+        <div><strong>01</strong><span>Reconocer</span><small>Factores de riesgo</small></div>
+        <div><strong>02</strong><span>Comprender</span><small>El resultado</small></div>
+        <div><strong>03</strong><span>Actuar</span><small>Con prevención</small></div>
+    </div>
+</section>
+
+<section id="preguntas" class="faq-section">
+    <div class="section-heading">
+        <div class="section-tag">
+            <i class="fa-solid fa-circle-question"></i>
+            Preguntas frecuentes
+        </div>
+        <h2>Resolvemos tus dudas</h2>
+        <p>Información rápida para entender el funcionamiento de la herramienta.</p>
+    </div>
+
+    <div class="faq-list">
+        <details>
+            <summary>¿La evaluación tiene algún costo? <i class="fa-solid fa-plus"></i></summary>
+            <p>La evaluación educativa de esta propuesta está planteada como un recurso accesible para orientar a las familias.</p>
+        </details>
+        <details>
+            <summary>¿El resultado es un diagnóstico técnico? <i class="fa-solid fa-plus"></i></summary>
+            <p>No. Es una orientación educativa y no reemplaza una inspección o evaluación realizada por un profesional.</p>
+        </details>
+        <details>
+            <summary>¿Qué puedo hacer después de conocer mi resultado? <i class="fa-solid fa-plus"></i></summary>
+            <p>Revisa las recomendaciones, completa el checklist preventivo y prioriza las condiciones que necesiten atención.</p>
+        </details>
+        <details>
+            <summary>¿Por qué se consideran varias condiciones? <i class="fa-solid fa-plus"></i></summary>
+            <p>Porque la vulnerabilidad de una vivienda puede estar relacionada con diferentes factores y no con una sola característica.</p>
+        </details>
+    </div>
+</section>
+
+<section class="local-section">
+    <div class="local-content">
+        <div class="local-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div>
+            <span class="section-tag">Enfoque local</span>
+            <h2>Pensado para Sullana</h2>
+            <p>
+                La propuesta busca acercar la prevención a las familias de Sullana
+                mediante información clara, evaluación sencilla y acciones prácticas.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-card">
+        <div>
+            <span class="cta-kicker">SULLANA ECO-RESILIENTE</span>
+            <h2>Conocer el riesgo es el primer paso para prevenirlo.</h2>
+            <p>Evalúa tu vivienda y recibe una orientación preventiva.</p>
+        </div>
+        <a href="#evaluacion" class="btn-primary">
+            Evaluar mi vivienda
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+<div class="disclaimer">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>
+        Esta herramienta tiene fines educativos y orientativos. No reemplaza
+        una evaluación técnica de la vivienda ni un diagnóstico profesional.
+    </span>
+</div>
+
+<footer>
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <i class="fa-solid fa-house-chimney"></i>
+            </div>
+
+            <div>
+                <h3>Sullana Eco-Resiliente</h3>
+                <p>Prevención y resiliencia frente al FEN.</p>
+            </div>
+        </div>
+
+        <div class="footer-text">
+            <p>Herramienta educativa de orientación preventiva.</p>
+            <span>© 2026 Sullana Eco-Resiliente</span>
+        </div>
+
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

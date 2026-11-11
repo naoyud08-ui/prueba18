@@ -1,12 +1,6 @@
-ACTUALIZACIÓN FEN – BOTÓN VOLVER A MEDICORE
+ACTUALIZACION FEN
 
-1. Entra al repositorio https://github.com/naoyud08-ui/prueba18
-2. Abre la carpeta/raíz donde está index.html.
-3. Sube TODO el contenido de esta carpeta conservando la estructura (index.html, style.css, script.js y assets/).
-4. Acepta reemplazar los archivos existentes y pulsa Commit changes.
-5. Espera la publicación de GitHub Pages y prueba desde MediCore, en la misma pestaña.
+Se elimino unicamente el boton "Volver" de la barra superior y su comportamiento asociado.
+El resto del diseño, formularios, enlaces, imagenes y funciones se conserva.
 
-El acceso desde MediCore ya incluye el parámetro return_to con la URL del panel.
-El botón Volver usa primero el historial del navegador para recuperar exactamente
-el panel/módulo anterior (incluidos scroll y filtros). Si no hay historial, usa
-return_to como respaldo. Si FEN se abre directamente, vuelve al inicio de FEN.
+Para publicar, sube el contenido de esta carpeta al repositorio de GitHub Pages y confirma los cambios.
